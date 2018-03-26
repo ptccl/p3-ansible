@@ -1,6 +1,8 @@
 # p3-ansible
 
 **Membuat Inventory**
+
+
 Di sini kita membuat nama komputer menjadi host01. Agar ansible dapat mengetahui, kita menempatkan hostname kita (host01) ke *Inventory File*. Kita beri nama inventory file dengan nama myhosts, dan grup yang diberi nama group1.
 Tuliskan sintak di bawah ini:
 
@@ -15,13 +17,17 @@ Kemudian, tambahkan host ke grup dengan sintak:
 Di sini kita juga mengatur username untuk servis SSH, yaitu ubuntu.
 
 **Menjalankan Ansible**
--Ad-hoc Tasks
+
+
+- Ad-hoc Tasks
+
 Untuk menjalankan ansible secara ad-hoc, menggunakan sebuah modul, menggunakan command *ansible*.
 Contohnya, untuk mengecek tanggal dan waktu saat ini dari remote host:
 
 ```ansible group1 -i myhosts -m command -a date```
 
--Playbook
+* Playbook
+
 Playbook ini merupakan cara lain untuk menjalankan ansible.
 Menjalankan playbook
 Playbook ini akan menjalankan sebuah task pada host01.
@@ -52,6 +58,8 @@ Untuk menjalankan playbook, gunakan command ansible-playbookdengan inventory fil
 Ansible sebaiknya mengembalikan hasil *Changed=1*, mengindikasikan bahwa package telah terinstall.
 
 **Memastikan package sudah terhapus**
+
+
 Contoh mengganti versi sysstat dari latest menjadi versi 10.2.0-1
 Pada site.yml diganti menjadi seperti di bawah ini:
 
